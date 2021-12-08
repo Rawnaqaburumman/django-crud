@@ -1,0 +1,10 @@
+{% extends '_base.html' %}
+{% block title %}{{snack.name}} Delete{% endblock %}
+{% block content %}
+
+<form method="post">{% csrf_token %}
+    <p> Are you sure to delete "{{ object }}" snack from list ?</p>
+    <input type="submit" value="yes">
+</form>
+
+{% endblock %}

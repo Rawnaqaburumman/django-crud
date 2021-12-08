@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+{% block title %}Snack List{% endblock %}
+{% block content %}
+</br>
+<img src="https://www.bruker.com/pl/applications/food-analysis-and-agriculture/food-quality/snacks/_jcr_content/root/herostage/backgroundImageVPL.coreimg.82.1920.jpeg/1597679208099/savoury-snacks.jpeg" >
+<ul>
+    {% for snack in object_list %}
+    <li>
+        <a href="{% url 'snack_detail' snack.pk %}">{{ snack.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a style= "font-weight: bolder;color: black;font-size: larger ; background-color: rgb(247, 243, 53);"href="{% url 'snack_create' %}"> Create New Snack</a>
+
+{% endblock %}

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.urls import reverse_lazy
 
 # Create your views here.
 from .models import Snack
@@ -31,7 +32,7 @@ class SnackUpdateView(UpdateView):
     template_name = "snack_update.html"
     model = Snack
     fields = ["title", "description"]
-    template_name_suffix = '_update_form'
+ 
 
 class SnackDeleteView(DeleteView):
     template_name = "snack_delete.html"
